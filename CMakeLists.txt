@@ -9,6 +9,8 @@
 
 # # Set Variables
 # set(SOURCE_DIR src)
+set_target_properties(PandemoniumRenderer PROPERTIES LINKER_LANGUAGE CXX)
+
 set(VULKAN_PATH C:/VulkanSDK/1.3.231.1)
 set(GLFW_PATH glfw)
 
@@ -28,17 +30,18 @@ add_subdirectory(${GLFW_PATH})
 # )
 
 target_sources(
-    PandemoniumRenderer
-    PUBLIC
-	${CMAKE_CURRENT_SOURCE_DIR}/src/main.cpp
+	PandemoniumRenderer
+	PUBLIC
+	# ${CMAKE_CURRENT_SOURCE_DIR}/headers/Window.h
 )
 
 target_include_directories(
-    PandemoniumRenderer 
-    PRIVATE 
-    ${SOURCE_DIR}
-    ${VULKAN_PATH}/Include
-    ${GLFW_PATH}/include
+	PandemoniumRenderer
+	PRIVATE 
+	# ${VULKAN_PATH}/Include
+	# ${GLFW_PATH}/include
+	# "../Pandemonium-Core/headers"
+	# "../Pandemonium-Events/headers"
 )
 
 # target_link_libraries(
