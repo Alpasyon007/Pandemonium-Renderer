@@ -12,7 +12,8 @@ namespace Pandemonium {
 				LOG_ERROR("RendererAPI::None is currently not supportetd!");
 				DEBUG_BREAK();
 				return nullptr;
-			case RendererAPI::OpenGL: return new OpenGLVertexBuffer(vertices, size);
+			case RendererAPI::OpenGL:
+				return new OpenGLVertexBuffer(vertices, size);
 		}
 
 		LOG_ERROR("Unknown Renderer API!");
@@ -25,7 +26,8 @@ namespace Pandemonium {
 				LOG_ERROR("RendererAPI::None is currently not supportetd!");
 				DEBUG_BREAK();
 				return nullptr;
-			case RendererAPI::OpenGL: return new OpenGLIndexBuffer(indices, size);
+			case RendererAPI::OpenGL:
+				return new OpenGLIndexBuffer(indices, size);
 		}
 
 		LOG_ERROR("Unknown Renderer API!");
