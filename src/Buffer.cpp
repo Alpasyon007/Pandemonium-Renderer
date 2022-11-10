@@ -8,12 +8,12 @@ namespace Pandemonium {
 
 	VertexBuffer* VertexBuffer::Create(float* vertices, uint32_t size) {
 		switch(Renderer::GetAPI()) {
-			case RendererAPI::None: {
+			case RendererAPI::API::None: {
 				LOG_ERROR("RendererAPI::None is currently not supportetd!");
 				DEBUG_BREAK();
 				return nullptr;
 			}
-			case RendererAPI::OpenGL: {
+			case RendererAPI::API::OpenGL: {
 				return new OpenGLVertexBuffer(vertices, size);
 			}
 		}
@@ -24,12 +24,12 @@ namespace Pandemonium {
 
 	IndexBuffer* IndexBuffer::Create(uint32_t* indices, uint32_t size) {
 		switch(Renderer::GetAPI()) {
-			case RendererAPI::None: {
+			case RendererAPI::API::None: {
 				LOG_ERROR("RendererAPI::None is currently not supportetd!");
 				DEBUG_BREAK();
 				return nullptr;
 			}
-			case RendererAPI::OpenGL: {
+			case RendererAPI::API::OpenGL: {
 				return new OpenGLIndexBuffer(indices, size);
 			}
 		}

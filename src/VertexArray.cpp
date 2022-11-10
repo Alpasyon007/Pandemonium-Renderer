@@ -8,12 +8,12 @@ namespace Pandemonium {
 
 	VertexArray* VertexArray::Create() {
 		switch(Renderer::GetAPI()) {
-			case RendererAPI::None: {
+			case RendererAPI::API::None: {
 				LOG_ERROR("RendererAPI::None is currently not supportetd!");
 				DEBUG_BREAK();
 				return nullptr;
 			}
-			case RendererAPI::OpenGL: {
+			case RendererAPI::API::OpenGL: {
 				return new OpenGLVertexArray();
 			}
 		}
