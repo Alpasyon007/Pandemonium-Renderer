@@ -2,6 +2,7 @@
 #define BUFFER_H
 
 #include "ppch.h"
+#include "Core.h"
 
 namespace Pandemonium {
 
@@ -110,7 +111,7 @@ namespace Pandemonium {
 		uint32_t				   m_Stride = 0;
 	};
 
-	class VertexBuffer {
+	class PANDEMONIUM_API VertexBuffer {
 	public:
 		virtual ~VertexBuffer() {}
 
@@ -123,7 +124,7 @@ namespace Pandemonium {
 		static VertexBuffer*		Create(float* vertices, uint32_t size);
 	};
 
-	class IndexBuffer {
+	class PANDEMONIUM_API IndexBuffer {
 	public:
 		virtual ~IndexBuffer() {}
 

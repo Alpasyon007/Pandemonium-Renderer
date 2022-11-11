@@ -21,7 +21,7 @@ namespace Pandemonium {
 
 		inline static API GetAPI() { return s_API; }
 	private:
-		static API s_API;
+		inline static API s_API = RendererAPI::API::OpenGL;
 	};
 
 } // namespace Pandemonium

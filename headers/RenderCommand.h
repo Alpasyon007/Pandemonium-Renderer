@@ -4,7 +4,7 @@
 #include "RendererAPI.h"
 
 namespace Pandemonium {
-	class RenderCommand {
+	class PANDEMONIUM_API RenderCommand {
 	public:
 		inline static void SetClearColor(const glm::vec4& color) { s_RendererAPI->SetClearColor(color); }
 

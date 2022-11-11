@@ -2,11 +2,14 @@
 #define SHADER_H
 
 #include "ppch.h"
+
+#include "Core.h"
+
 #include <glm/glm.hpp>
 
 namespace Pandemonium {
 
-	class Shader {
+	class PANDEMONIUM_API Shader {
 	public:
 		Shader(const std::string& vertexSrc, const std::string& fragmentSrc);
 		~Shader();

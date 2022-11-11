@@ -6,7 +6,8 @@
 #include "Shader.h"
 
 namespace Pandemonium {
-	class Renderer {
+
+	class PANDEMONIUM_API Renderer {
 	public:
 		static void					   BeginScene(OrthographicCamera& camera);
 		static void					   EndScene();

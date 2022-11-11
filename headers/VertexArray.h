@@ -6,7 +6,7 @@
 #include "Buffer.h"
 
 namespace Pandemonium {
-	class VertexArray {
+	class PANDEMONIUM_API VertexArray {
 	public:
 		virtual ~VertexArray() {}
 

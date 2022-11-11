@@ -1,11 +1,13 @@
 #ifndef ORTOGRAPHIC_CAMERA_H
 #define ORTOGRAPHIC_CAMERA_H
 
+#include "Core.h"
+
 #include <glm/glm.hpp>
 
 namespace Pandemonium {
 
-	class OrthographicCamera {
+	class PANDEMONIUM_API OrthographicCamera {
 	public:
 		OrthographicCamera(float left, float right, float bottom, float top);
 
