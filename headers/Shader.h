@@ -2,6 +2,7 @@
 #define SHADER_H
 
 #include "ppch.h"
+#include <glm/glm.hpp>
 
 namespace Pandemonium {
 
@@ -12,6 +13,8 @@ namespace Pandemonium {
 
 		void Bind() const;
 		void Unbind() const;
+
+		void UploadUniformMat4(const std::string& name, const glm::mat4& matrix);
 	private:
 		uint32_t m_RendererID;
 	};
