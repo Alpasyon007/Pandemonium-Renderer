@@ -10,7 +10,7 @@ namespace Pandemonium {
 
 		inline static void Clear() { s_RendererAPI->Clear(); }
 
-		inline static void DrawIndexed(const std::shared_ptr<VertexArray>& VertexArray) { s_RendererAPI->DrawIndexed(VertexArray); }
+		inline static void DrawIndexed(const Ref<VertexArray>& VertexArray) { s_RendererAPI->DrawIndexed(VertexArray); }
 	private:
 		static RendererAPI* s_RendererAPI;
 	};
