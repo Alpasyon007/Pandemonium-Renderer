@@ -53,7 +53,7 @@ namespace Pandemonium {
 	}
 
 	bool OrthographicCameraController::OnWindowResized(WindowResizeEvent& e) {
-		m_AspectRation = (float)e.GetWidth() / (float)e.GetHeight();
+		m_AspectRation = static_cast<float>(e.GetWidth()) / static_cast<float>(e.GetHeight());
 		m_Camera.SetProjection(-m_AspectRation * m_ZoomLevel, m_AspectRation * m_ZoomLevel, -m_ZoomLevel, m_ZoomLevel);
 		return false;
 	}
