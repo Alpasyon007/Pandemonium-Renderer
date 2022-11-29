@@ -6,7 +6,7 @@
 
 namespace Pandemonium {
 
-	VertexArray* VertexArray::Create() {
+	Ref<VertexArray> VertexArray::Create() {
 		switch(Renderer::GetAPI()) {
 			case RendererAPI::API::None: {
 				LOG_ERROR("RendererAPI::None is currently not supportetd!");
@@ -14,7 +14,7 @@ namespace Pandemonium {
 				return nullptr;
 			}
 			case RendererAPI::API::OpenGL: {
-				return new OpenGLVertexArray();
+				return std::make_shared<OpenGLVertexArray>();
 			}
 		}
 
