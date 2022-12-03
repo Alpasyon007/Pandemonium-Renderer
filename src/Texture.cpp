@@ -6,6 +6,22 @@
 
 namespace Pandemonium {
 
+	Ref<Texture2D> Texture2D::Create(uint32_t width, uint32_t height) {
+		switch(Renderer::GetAPI()) {
+			case RendererAPI::API::None: {
+				LOG_ERROR("RendererAPI::None is currently not supportetd!");
+				DEBUG_BREAK();
+				return nullptr;
+			}
+			case RendererAPI::API::OpenGL: {
+				return std::make_shared<OpenGLTexture2D>(width, height);
+			}
+		}
+
+		LOG_ERROR("Unknown Renderer API!");
+		return nullptr;
+	}
+
 	Ref<Texture2D> Texture2D::Create(const std::string& path) {
 		switch(Renderer::GetAPI()) {
 			case RendererAPI::API::None: {
