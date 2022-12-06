@@ -9,6 +9,8 @@ namespace Pandemonium {
 	Renderer::SceneData* Renderer::m_SceneData = new Renderer::SceneData;
 
 	void				 Renderer::Init() {
+		PANDEMONIUM_PROFILE_FUNCTION();
+
 		RenderCommand::Init();
 		Renderer2D::Init();
 	}

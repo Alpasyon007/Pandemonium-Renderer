@@ -1,7 +1,8 @@
 #ifndef BUFFER_H
 #define BUFFER_H
 
-#include "ppch.h"
+#include <string>
+
 #include "Core.h"
 
 namespace Pandemonium {

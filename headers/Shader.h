@@ -1,7 +1,8 @@
 #ifndef SHADER_H
 #define SHADER_H
 
-#include "ppch.h"
+#include <string>
+#include <unordered_map>
 
 #include "Core.h"
 #include <glm/glm.hpp>
