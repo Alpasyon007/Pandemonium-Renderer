@@ -42,7 +42,7 @@ namespace Pandemonium {
 		 uint32_t whiteTextureData = 0xffffffff;
 		 s_Data->WhiteTexture->SetData(&whiteTextureData, sizeof(whiteTextureData));
 
-		 s_Data->TextureShader = Shader::Create("C:\\dev\\Pandemonium\\Game\\assets\\shaders\\Texture.glsl");
+		 s_Data->TextureShader = Shader::Create("C:\\dev\\Pandemonium\\Pandemonium Engine\\Game\\assets\\shaders\\Texture.glsl");
 		 s_Data->TextureShader->Bind();
 		 s_Data->TextureShader->SetInt("u_Texture", 0);
 	}
